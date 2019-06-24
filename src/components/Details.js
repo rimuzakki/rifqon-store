@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { ProductConsumer } from "../context";
 import { Link } from "react-router-dom";
 import { ButtonContainer } from "./Button";
+import { Container, Row, Col, Button } from "react-bootstrap";
 
 class Details extends Component {
   render() {
@@ -18,21 +19,24 @@ class Details extends Component {
             inCart
           } = value.detailProduct;
           return (
-            <div className="container py-5">
+            <Container className="py-5">
               {/* title */}
-              <div className="row">
-                <div className="col-10 mx-auto text-center text-slanted text-blue my-5">
+              <Row>
+                <Col
+                  xs={10}
+                  className="mx-auto text-center text-slanted text-blue my-5"
+                >
                   <h1>{title}</h1>
-                </div>
-              </div>
+                </Col>
+              </Row>
               {/* end title */}
               {/* product info */}
-              <div className="row">
-                <div className="col-10 mx-auto col-md-6 my-3 text-capitalize">
+              <Row>
+                <Col xs={10} md={6} className="mx-auto my-3 text-capitalize">
                   <img src={img} className="img-fluid" alt="product" />
-                </div>
+                </Col>
                 {/* product text */}
-                <div className="col-10 mx-auto col-md-6 my-3 text-capitalize">
+                <Col xs={10} md={6} className="mx-auto my-3 text-capitalize">
                   <h2>model: {title}</h2>
                   <h4 className="text-title text-uppercase text-muted mt-3 mb-2">
                     made by: <span className="text-uppercase">{company}</span>
@@ -50,7 +54,7 @@ class Details extends Component {
                   {/* Buttons */}
                   <div>
                     <Link to="/">
-                      <ButtonContainer>Back to product</ButtonContainer>
+                      <Button variant="link">Back to product</Button>
                     </Link>
                     <ButtonContainer
                       cart
@@ -63,9 +67,9 @@ class Details extends Component {
                       {inCart ? "inCart" : "add to cart"}
                     </ButtonContainer>
                   </div>
-                </div>
-              </div>
-            </div>
+                </Col>
+              </Row>
+            </Container>
           );
         }}
       </ProductConsumer>

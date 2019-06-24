@@ -2,16 +2,17 @@ import React, { Component } from "react";
 import Product from "./Product";
 import Title from "./Title";
 import { ProductConsumer } from "../context";
+import { Container, Row } from "react-bootstrap";
 
 class ProductList extends Component {
   render() {
     return (
       <React.Fragment>
         <div className="py-5">
-          <div className="container">
+          <Container>
             <Title name="our" title="products" />
 
-            <div className="row">
+            <Row>
               <ProductConsumer>
                 {value => {
                   return value.products.map(product => {
@@ -19,8 +20,8 @@ class ProductList extends Component {
                   });
                 }}
               </ProductConsumer>
-            </div>
-          </div>
+            </Row>
+          </Container>
         </div>
       </React.Fragment>
     );

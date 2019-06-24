@@ -1,29 +1,30 @@
 import React from "react";
+import { Container, Row, Col } from "react-bootstrap";
 
 function CartColumns() {
   return (
-    <div className="container-fluid text-center d-none d-lg-block">
-      <div className="row">
-        <div className="col-10 mx-auto col-lg-2">
-          <p className="text-uppercase">products</p>
-        </div>
-        <div className="col-10 mx-auto col-lg-2">
-          <p className="text-uppercase">name of product</p>
-        </div>
-        <div className="col-10 mx-auto col-lg-2">
-          <p className="text-uppercase">price</p>
-        </div>
-        <div className="col-10 mx-auto col-lg-2">
-          <p className="text-uppercase">quantity</p>
-        </div>
-        <div className="col-10 mx-auto col-lg-2">
-          <p className="text-uppercase">remove</p>
-        </div>
-        <div className="col-10 mx-auto col-lg-2">
-          <p className="text-uppercase">total</p>
-        </div>
-      </div>
-    </div>
+    <Container className="text-center d-none d-lg-block">
+      <Row>
+        <Col xs={10} lg={1} className="mx-auto">
+          <p className="text-uppercase font-weight-bold">remove</p>
+        </Col>
+        <Col xs={10} lg={2} className="mx-auto">
+          <p className="text-uppercase font-weight-bold">products</p>
+        </Col>
+        <Col xs={10} lg={3} className="mx-auto">
+          <p className="text-uppercase font-weight-bold">name of product</p>
+        </Col>
+        <Col xs={10} lg={2} className="mx-auto">
+          <p className="text-uppercase font-weight-bold">price</p>
+        </Col>
+        <Col xs={10} lg={2} className="mx-auto">
+          <p className="text-uppercase font-weight-bold">quantity</p>
+        </Col>
+        <Col xs={10} lg={2} className="mx-auto">
+          <p className="text-uppercase font-weight-bold">total</p>
+        </Col>
+      </Row>
+    </Container>
   );
 }
 

@@ -1,29 +1,36 @@
 import React from "react";
+import { Row, Col } from "react-bootstrap";
 
 function CartItem({ item, value }) {
   const { id, title, img, price, total, count } = item;
   const { increment, decrement, removeItem } = value;
 
   return (
-    <div className="row my-1 text-capitalize text-center">
-      <div className="col-10 mx-auto col-lg-2">
+    <Row className="my-1 text-capitalize text-center">
+      <Col xs={10} lg={1} className="mx-auto">
+        <div className="cart-icon" onClick={() => removeItem(id)}>
+          <i className="fas fa-trash" />
+        </div>
+      </Col>
+
+      <Col xs={10} lg={2} className="mx-auto">
         <img
           src={img}
           style={{ width: "5rem", height: "5rem" }}
           className="img-fluid"
           alt="product"
         />
-      </div>
-      <div className="col-10 mx-auto col-lg-2">
+      </Col>
+      <Col xs={10} lg={3} className="mx-auto">
         <span className="d-lg-none">product : </span> {title}
-      </div>
+      </Col>
 
-      <div className="col-10 mx-auto col-lg-2">
+      <Col xs={10} lg={2} className="mx-auto">
         <span className="d-lg-none">price : $ </span>
         {price}
-      </div>
+      </Col>
 
-      <div className="col-10 mx-auto col-lg-2 my-2 my-lg-0">
+      <Col xs={10} lg={2} className="mx-auto my-2 my-lg-0">
         <div className="d-flex justify-content-center">
           <div>
             <span className="btn btn-black mx-1" onClick={() => decrement(id)}>
@@ -35,18 +42,12 @@ function CartItem({ item, value }) {
             </span>
           </div>
         </div>
-      </div>
+      </Col>
 
-      <div className="col-10 mx-auto col-lg-2">
-        <div className="cart-icon" onClick={() => removeItem(id)}>
-          <i className="fas fa-trash" />
-        </div>
-      </div>
-
-      <div className="col-10 mx-auto col-lg-2">
+      <Col xs={10} lg={2} className="mx-auto">
         <strong>item total : $ {total}</strong>
-      </div>
-    </div>
+      </Col>
+    </Row>
   );
 }
 
