@@ -3,13 +3,13 @@ import { Link } from "react-router-dom";
 import logo from "../logo.png";
 // import styled from "styled-components";
 // import { ButtonContainer } from "./Button";
-import { Navbar, Nav } from "react-bootstrap";
+import { Container, Navbar, Nav } from "react-bootstrap";
 
 class NavbarComponent extends Component {
   render() {
     return (
-      <Navbar fixed="top" bg="light" expand="lg" className="p-0 border-bottom">
-        <div className="container">
+      <Navbar fixed="top" expand="lg" className="py-0 border-bottom">
+        <Container>
           <Navbar.Brand>
             <Link to="/">
               <img src={logo} alt="store" className="navbar-brand" />
@@ -39,7 +39,7 @@ class NavbarComponent extends Component {
               </Nav.Item>
             </Nav>
           </Navbar.Collapse>
-        </div>
+        </Container>
       </Navbar>
     );
   }

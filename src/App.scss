@@ -1,45 +1,66 @@
+$lightBackground: #fff;
 $backgroundMain: #fafafa;
+$darkBackgroundMain: darken($backgroundMain, 3);
 $foreColor: #212121;
-$lightForeColor: lighten($foreColor, 3);
+$lightForeColor: lighten($foreColor, 10);
 
 :root {
-  --mainBlue: #2a2a72;
-  --lightBlue: #009fdd;
   --mainWhite: #fafafa;
   --mainDark: #212121;
-  --mainYellow: #ffa400;
 }
 
 body {
   font-family: "Raleway", sans-serif;
+  font-size: 14px;
   padding-top: 82px;
   background-color: $backgroundMain !important;
-  color: var(--mainDark) !important;
+  color: $lightForeColor;
 }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: $foreColor;
+}
+
+h1 {
+  font-size: 40px;
+  text-transform: uppercase;
+  color: $foreColor;
+  font-weight: 900;
+  line-height: 60px;
+}
+
 .text-title {
   font-weight: bold;
   text-transform: uppercase;
 }
 
 .text-bright {
-  color: var(--lightBlue);
+  color: $lightForeColor;
 }
 .btn-black {
   background: transparent;
   text-transform: capitalize;
   font-size: 0.8rem !important;
-  color: var(--mainDark);
+  color: $foreColor;
   border-radius: 0 !important;
-  border: 0.1rem solid var(--mainDark) !important;
+  border: 0.1rem solid $foreColor !important;
 }
 .btn-black:hover {
-  background: var(--mainDark) !important;
-  color: var(--mainWhite) !important;
+  background: $foreColor !important;
+  color: $backgroundMain !important;
 }
 .cart-icon {
   cursor: pointer;
   font-size: 1.2rem;
   color: $foreColor;
+}
+.navbar {
+  background-color: $backgroundMain;
 }
 
 .navbar-collapse {
@@ -96,15 +117,20 @@ body {
   border-radius: 0.5rem 0 0 0;
 }
 
+.form-control {
+  border-radius: 0px;
+  border: 1px solid $foreColor;
+  &:focus {
+    color: $lightForeColor;
+    background-color: #fff;
+    border-color: $foreColor;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba($foreColor, 0.25);
+  }
+}
+
 .text-intro {
   margin: 150px auto 0;
-  h1 {
-    font-size: 40px;
-    text-transform: uppercase;
-    color: $foreColor;
-    font-weight: 900;
-    line-height: 60px;
-  }
   p {
     font-size: 14px;
     text-align: justify;
@@ -120,18 +146,73 @@ body {
   line-height: 20px;
 }
 
-.Tilt {
-  background-color: #9e21ff;
-  background-image: -webkit-linear-gradient(
-    315deg,
-    #ed21ff 0%,
-    #9e21ff 100%,
-    #9e21ff 100%
-  );
-  background-image: linear-gradient(
-    135deg,
-    #ed21ff 0%,
-    #9e21ff 100%,
-    #9e21ff 100%
-  );
+#intro {
+  background-color: $lightBackground;
+}
+
+#home-product {
+  .cart-btn {
+    display: none;
+  }
+}
+
+.desc {
+  p {
+    margin-top: 10px;
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: 1px;
+  }
+}
+
+.card {
+  -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
+    0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
+    0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+}
+
+#home-about,
+#newsletter,
+#header-product {
+  background-color: $darkBackgroundMain;
+}
+
+#footer {
+  background-color: $foreColor;
+  color: $backgroundMain;
+  .footer-title {
+    padding-bottom: 10px;
+  }
+  a {
+    color: $backgroundMain;
+  }
+  .fab {
+    margin: 0px 10px 0px 0px;
+  }
+}
+#copyright {
+  text-align: center;
+  background-color: $foreColor;
+  color: $backgroundMain;
+  height: 50px;
+  line-height: 50px;
+}
+
+.desc {
+  h1 {
+    font-size: 40px;
+    text-transform: capitalize !important;
+    color: $foreColor;
+    font-weight: 900;
+    line-height: 60px;
+    margin-top: 0px;
+  }
+  p {
+    color: $lightForeColor;
+    margin-top: 10px;
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: 1px;
+  }
 }
