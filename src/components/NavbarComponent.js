@@ -27,10 +27,15 @@ class NavbarComponent extends Component {
                 <Link to="/product">Products</Link>
               </Nav.Item>
               <Nav.Item as="li">
-                <Link to="/">About Us</Link>
+                <Link to="/aboutus">About Us</Link>
               </Nav.Item>
               <Nav.Item as="li">
-                <Link to="/">Contact Us</Link>
+                <Link to="/contactus">Contact Us</Link>
+              </Nav.Item>
+              <Nav.Item as="li">
+                <Link to="/login">
+                  <i class="fas fa-user" />
+                </Link>
               </Nav.Item>
               <Nav.Item as="li">
                 <Link to="/cart">

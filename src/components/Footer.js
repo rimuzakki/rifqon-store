@@ -21,8 +21,8 @@ class Footer extends Component {
                   <p class="footer-title">
                     <strong>Hubungi kami</strong>
                   </p>
-                  <p>Senin - Jumat : 08.00 - 21.00</p>
-                  <p>Sabtu - Minggu : 08.00 - 17.00</p>
+                  <p>Monday - Friday : 08.00 - 21.00</p>
+                  <p>Saturday - Sunday : 08.00 - 17.00</p>
 
                   <p>Email : rolaralaproject@gmail.com</p>
                   <p>
@@ -55,12 +55,18 @@ class Footer extends Component {
                   <p className="footer-title">
                     <strong>Rolarala</strong>
                   </p>
-                  <p>Tentang Kami</p>
                   <p>
-                    <Link to="/">Hubungi Kami</Link>
+                    <Link to="/aboutus">About Us</Link>
                   </p>
-                  <p>Konfirmasi Pembayaran</p>
-                  <p>Pengembalian Barang</p>
+                  <p>
+                    <Link to="/contactus">Contact Us</Link>
+                  </p>
+                  <p>
+                    <Link to="/">Payment Confirmation</Link>
+                  </p>
+                  <p>
+                    <Link to="/">Product Return</Link>
+                  </p>
                 </div>
               </Col>
               <Col xs={10} md={3} className="mx-auto pb-3">
@@ -68,9 +74,9 @@ class Footer extends Component {
                   <p className="footer-title">
                     <strong>Lainnya</strong>
                   </p>
-                  <p>Jurnal</p>
-                  <p>Ketentuan Layanan</p>
-                  <p>Kebijaka Privasi</p>
+                  <p>Journal</p>
+                  <p>Terms of Service</p>
+                  <p>Privacy Policy</p>
                 </div>
               </Col>
             </Row>
